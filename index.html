@@ -63,9 +63,9 @@
     <div class="section">
       <h2>About</h2>
       <p>
-        I’m a Business Analytics graduate with experience turning data into insights using SQL, Excel,
-        Power BI, and Python. I focus on business performance, customer behavior, and decision support
-        through clean reporting, dashboards, and analysis.
+        Business Analytics graduate with experience turning data into insights using SQL, Excel,
+        Power BI, and Python. Focused on business performance, customer behavior, and decision
+        support through clean analysis and reporting.
       </p>
     </div>
 
@@ -75,46 +75,59 @@
 
       <div class="grid">
 
+        <!-- Classic Models -->
         <div class="card">
           <img src="assets/classic-models.png" alt="Classic Models screenshot">
           <div class="content">
             <h3>Classic Models – Sales & Financial Analysis</h3>
-            <p>SQL + Excel + Power BI analysis of revenue, credit risk, and customer behavior.</p>
+            <p>End-to-end sales and financial analysis using SQL, Excel, and Power BI.</p>
             <div class="btns">
               <a class="btn primary" href="https://github.com/dhiraj092/Classic-Models" target="_blank">Repository</a>
+              <span class="btn">SQL</span>
+              <span class="btn">Excel</span>
+              <span class="btn">Power BI</span>
             </div>
           </div>
         </div>
 
+        <!-- Stature Leadership -->
         <div class="card">
           <img src="assets/stature-leadership.png" alt="Stature Leadership screenshot">
           <div class="content">
             <h3>Stature Leadership – Survey Analytics</h3>
-            <p>Leadership alignment dashboards and insights for internal decision-making.</p>
+            <p>Survey and people analytics supporting leadership alignment decisions.</p>
             <div class="btns">
               <a class="btn primary" href="https://github.com/dhiraj092/Stature-Leadership" target="_blank">Repository</a>
+              <span class="btn">Power BI</span>
+              <span class="btn">Survey Data</span>
             </div>
           </div>
         </div>
 
+        <!-- Association Rule Mining -->
         <div class="card">
-          <img src="assets/kmeans.png" alt="K-Means screenshot">
+          <img src="assets/grocery-basket.png" alt="Grocery Basket Analysis screenshot">
           <div class="content">
-            <h3>Customer Segmentation (K-Means)</h3>
-            <p>Unsupervised ML clustering for retail customer analysis.</p>
+            <h3>Association Rule Mining – Grocery Basket Analysis</h3>
+            <p>Market basket analysis using Apriori to identify product purchase patterns.</p>
             <div class="btns">
-              <a class="btn primary" href="https://github.com/dhiraj092/Customer-Segmentation-using-K-Means-Clustering-with-Mall-Customers" target="_blank">Repository</a>
+              <a class="btn primary" href="https://github.com/dhiraj092/Association-Rule-Mining-Grocery-Basket-Analysis" target="_blank">Repository</a>
+              <span class="btn">Python</span>
+              <span class="btn">Apriori</span>
             </div>
           </div>
         </div>
 
+        <!-- Online Shoppers Classification -->
         <div class="card">
-          <img src="assets/social-media.png" alt="Social Media Analytics screenshot">
+          <img src="assets/online-shoppers.png" alt="Online Shoppers Classification screenshot">
           <div class="content">
-            <h3>Social Media Analytics</h3>
-            <p>Engagement and performance analysis using Python.</p>
+            <h3>Classification of Online Shoppers</h3>
+            <p>Classification model to predict purchasing behavior of online visitors.</p>
             <div class="btns">
-              <a class="btn primary" href="https://github.com/dhiraj092/Social-Media-Analytics" target="_blank">Repository</a>
+              <a class="btn primary" href="https://github.com/dhiraj092/Classification-of-online-shoppers" target="_blank">Repository</a>
+              <span class="btn">Python</span>
+              <span class="btn">Classification</span>
             </div>
           </div>
         </div>
@@ -153,8 +166,8 @@
         const featuredRepos = [
           "classic-models",
           "stature-leadership",
-          "customer-segmentation-using-k-means-clustering-with-mall-customers",
-          "social-media-analytics"
+          "association-rule-mining-grocery-basket-analysis",
+          "classification-of-online-shoppers"
         ];
 
         const filtered = repos.filter(r => {
