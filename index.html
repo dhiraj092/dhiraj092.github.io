@@ -1,37 +1,190 @@
-<h2>Featured Projects</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dhiraj Thapa | Portfolio</title>
+  <style>
+    :root { --max: 980px; --border: #e6e6e6; --text: #1a1a1a; --muted:#555; }
+    body { font-family: Arial, sans-serif; color: var(--text); margin: 0; background: #fff; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 40px 18px; }
+    h1 { margin: 0 0 6px 0; font-size: 40px; }
+    .subtitle { color: var(--muted); margin: 0 0 18px 0; }
+    a { color: #0b66c3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-<div class="project">
-  <strong>Classic Models – Sales & Financial Analysis</strong><br>
-  SQL, Excel, and Power BI analysis of revenue trends, credit risk, and customer behavior.<br>
-  <a href="https://github.com/dhiraj092/Classic-Models" target="_blank">View Repository</a>
-</div>
+    .toplinks { margin: 10px 0 22px 0; display: flex; gap: 12px; flex-wrap: wrap; }
+    .pill { border: 1px solid var(--border); padding: 8px 12px; border-radius: 999px; color: var(--text); }
 
-<div class="project">
-  <strong>Stature Leadership – Survey & People Analytics</strong><br>
-  Leadership alignment dashboards and survey insights supporting internal decision-making.<br>
-  <a href="https://github.com/dhiraj092/Stature-Leadership" target="_blank">View Repository</a>
-</div>
+    .section { margin-top: 34px; }
+    .section h2 { margin: 0 0 14px 0; font-size: 24px; }
 
-<div class="project">
-  <strong>Customer Segmentation (K-Means – Mall Customers)</strong><br>
-  Unsupervised machine learning to segment retail customers based on spending behavior.<br>
-  <a href="https://github.com/dhiraj092/Customer-Segmentation-using-K-Means-Clustering-with-Mall-Customers" target="_blank">View Repository</a>
-</div>
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    @media (max-width: 760px){ .grid { grid-template-columns: 1fr; } }
 
-<div class="project">
-  <strong>Association Rule Mining – Grocery Basket Analysis</strong><br>
-  Market basket analysis using Apriori to identify product purchase patterns.<br>
-  <a href="https://github.com/dhiraj092/Association-Rule-Mining-Grocery-Basket-Analysis" target="_blank">View Repository</a>
-</div>
+    .card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #fff; }
+    .card img { width: 100%; height: 200px; object-fit: cover; display: block; background: #f6f6f6; }
+    .card .content { padding: 14px 14px 16px 14px; }
+    .card h3 { margin: 0 0 6px 0; font-size: 18px; }
+    .card p { margin: 0 0 12px 0; color: var(--muted); }
 
-<div class="project">
-  <strong>Advertising Click Prediction – Logistic Regression</strong><br>
-  Predicting ad click-through likelihood to support marketing optimization decisions.<br>
-  <a href="https://github.com/dhiraj092/Advertising-Click-Prediction-Logistic-Regression" target="_blank">View Repository</a>
-</div>
+    .btns { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); color: var(--text); }
+    .btn.primary { background: #0b66c3; color: #fff; border-color: #0b66c3; }
+    .btn:hover { text-decoration: none; opacity: 0.92; }
 
-<div class="project">
-  <strong>Customer Churn – Telecom Company</strong><br>
-  Churn prediction model to identify at-risk customers and support retention strategies.<br>
-  <a href="https://github.com/dhiraj092/Customer-Churn-in-Telecom-Company" target="_blank">View Repository</a>
-</div>
+    .repo-list { list-style: none; padding: 0; margin: 0; }
+    .repo-item { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; }
+    .repo-top { display:flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+    .repo-name { font-weight: 700; }
+    .repo-meta { color: var(--muted); font-size: 14px; }
+    .small { color: var(--muted); font-size: 14px; margin-top: 6px; }
+
+    .footer { margin-top: 40px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Dhiraj Thapa</h1>
+    <p class="subtitle">Business & Data Analyst | SQL · Excel · Power BI · Python</p>
+
+    <div class="toplinks">
+      <a class="pill" href="https://www.linkedin.com/in/dhiraj-thapa-668304198/" target="_blank">LinkedIn</a>
+      <a class="pill" href="https://github.com/dhiraj092" target="_blank">GitHub</a>
+      <!-- Optional: add your resume PDF link once you upload it -->
+      <!-- <a class="pill" href="assets/Dhiraj_Thapa_Resume.pdf" target="_blank">Resume (PDF)</a> -->
+    </div>
+
+    <!-- ABOUT AT THE BEGINNING -->
+    <div class="section">
+      <h2>About</h2>
+      <p>
+        I’m a Business Analytics graduate with experience turning data into insights using SQL, Excel, Power BI, and Python.
+        I focus on business performance, customer behavior, and decision support through clean reporting, dashboards, and analysis.
+      </p>
+    </div>
+
+    <!-- FEATURED PROJECTS WITH PHOTOS -->
+    <div class="section">
+      <h2>Featured Projects</h2>
+
+      <div class="grid">
+        <div class="card">
+          <img src="assets/classic-models.png" alt="Classic Models project screenshot">
+          <div class="content">
+            <h3>Classic Models – Sales & Financial Analysis</h3>
+            <p>SQL + Excel + Power BI analysis of revenue, credit risk, and customer behavior.</p>
+            <div class="btns">
+              <a class="btn primary" href="https://github.com/dhiraj092/Classic-Models" target="_blank">Repository</a>
+              <!-- Optional demo button -->
+              <!-- <a class="btn" href="#" target="_blank">Live Demo</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/stature-leadership.png" alt="Stature Leadership project screenshot">
+          <div class="content">
+            <h3>Stature Leadership – Survey Analytics</h3>
+            <p>Leadership alignment dashboards and insights for internal decision-making.</p>
+            <div class="btns">
+              <a class="btn primary" href="https://github.com/dhiraj092/Stature-Leadership" target="_blank">Repository</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/kmeans.png" alt="K-Means project screenshot">
+          <div class="content">
+            <h3>Customer Segmentation (K-Means)</h3>
+            <p>Unsupervised ML clustering for retail customer analysis.</p>
+            <div class="btns">
+              <a class="btn primary" href="https://github.com/dhiraj092/Customer-Segmentation-using-K-Means-Clustering-with-Mall-Customers" target="_blank">Repository</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/social-media.png" alt="Social Media Analytics project screenshot">
+          <div class="content">
+            <h3>Social Media Analytics</h3>
+            <p>Engagement and performance analysis using Python.</p>
+            <div class="btns">
+              <a class="btn primary" href="https://github.com/dhiraj092/Social-Media-Analytics" target="_blank">Repository</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="small">
+        Note: If images don’t show, it means the filenames don’t match exactly (case-sensitive). Example: <b>classic-models.png</b>
+      </p>
+    </div>
+
+    <!-- ALL REPOS AUTO-LOADED -->
+    <div class="section">
+      <h2>All Repositories</h2>
+      <p class="small">Auto-loaded from GitHub (public repos). Sorted by recently updated.</p>
+      <ul id="repoList" class="repo-list"></ul>
+      <p id="repoStatus" class="small"></p>
+    </div>
+
+    <div class="footer">
+      © <span id="year"></span> Dhiraj Thapa
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    async function loadRepos() {
+      const list = document.getElementById("repoList");
+      const status = document.getElementById("repoStatus");
+      status.textContent = "Loading repos…";
+
+      try {
+        // GitHub API: 100 repos per page (you currently have under that)
+        const res = await fetch("https://api.github.com/users/dhiraj092/repos?per_page=100&sort=updated");
+        if (!res.ok) throw new Error("GitHub API error: " + res.status);
+
+        const repos = await res.json();
+
+        // Optional: hide the website repo itself
+        const filtered = repos.filter(r => r.name.toLowerCase() !== "dhiraj092.github.io");
+
+        if (filtered.length === 0) {
+          status.textContent = "No public repositories found.";
+          return;
+        }
+
+        list.innerHTML = filtered.map(r => {
+          const desc = r.description ? r.description : "No description yet.";
+          const lang = r.language ? r.language : "—";
+          const stars = r.stargazers_count ?? 0;
+          const forks = r.forks_count ?? 0;
+
+          return `
+            <li class="repo-item">
+              <div class="repo-top">
+                <div>
+                  <a class="repo-name" href="${r.html_url}" target="_blank">${r.name}</a>
+                  <div class="small">${desc}</div>
+                </div>
+                <div class="repo-meta">
+                  ${lang} · ★ ${stars} · Forks ${forks}
+                </div>
+              </div>
+            </li>
+          `;
+        }).join("");
+
+        status.textContent = "";
+      } catch (e) {
+        status.textContent = "Could not load repos right now (GitHub API limit or network). Refresh or try later.";
+      }
+    }
+
+    loadRepos();
+  </script>
+</body>
+</html>
