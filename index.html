@@ -122,12 +122,13 @@
     </div>
 
     <!-- ALL REPOS AUTO-LOADED -->
-    <div class="section">
-      <h2>All Repositories</h2>
-      <p class="small">Auto-loaded from GitHub (public repos). Sorted by recently updated.</p>
-      <ul id="repoList" class="repo-list"></ul>
-      <p id="repoStatus" class="small"></p>
-    </div>
+  <div class="section">
+    <h2>Other Projects</h2>
+    <p class="small">Auto-loaded from GitHub (public repos). Sorted by recently updated.</p>
+    <ul id="repoList" class="repo-list"></ul>
+    <p id="repoStatus" class="small"></p>
+  </div>
+
 
     <div class="footer">
       © <span id="year"></span> Dhiraj Thapa
@@ -150,7 +151,17 @@
         const repos = await res.json();
 
         // Optional: hide the website repo itself
-        const filtered = repos.filter(r => r.name.toLowerCase() !== "dhiraj092.github.io");
+        const featuredRepos = [
+        "classic-models",
+        "stature-leadership",
+        "customer-segmentation-using-k-means-clustering-with-mall-customers",
+        "social-media-analytics"
+];
+
+const filtered = repos.filter(r =>
+  r.name.toLowerCase() !== "dhiraj092.github.io" &&
+  !featuredRepos.includes(r.name.toLowerCase())
+);
 
         if (filtered.length === 0) {
           status.textContent = "No public repositories found.";
