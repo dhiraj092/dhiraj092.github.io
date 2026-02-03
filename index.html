@@ -39,11 +39,9 @@
     .repo-list { list-style: none; padding: 0; margin: 0; }
     .repo-item { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; }
 
-    .repo-top { display:flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
     .repo-name { font-weight: 700; }
-    .repo-meta { color: var(--muted); font-size: 14px; }
-
     .small { color: var(--muted); font-size: 14px; margin-top: 6px; }
+
     .footer { margin-top: 40px; color: var(--muted); font-size: 13px; }
   </style>
 </head>
@@ -52,12 +50,11 @@
   <div class="wrap">
 
     <h1>Dhiraj Thapa</h1>
-    <p class="subtitle">Data Analysis | Market Research | Consumer Behavior | SQL · Excel · Power BI · Python</p>
+    <p class="subtitle">Business & Data Analyst | SQL · Excel · Power BI · Python</p>
 
     <div class="toplinks">
       <a class="pill" href="https://www.linkedin.com/in/dhiraj-thapa-668304198/" target="_blank">LinkedIn</a>
       <a class="pill" href="https://github.com/dhiraj092" target="_blank">GitHub</a>
-      <a class="pill" href="https://public.tableau.com/app/profile/dhiraj.thapa/vizzes">Tableau</a>
     </div>
 
     <!-- ABOUT -->
@@ -65,8 +62,8 @@
       <h2>About</h2>
       <p>
         Business Analytics graduate with experience turning data into insights using SQL, Excel,
-        Power BI, and Python. Focused on business performance, customer behavior, and decision
-        support through clean analysis and reporting.
+        Power BI, and Python. Focused on supporting business and stakeholder decisions through
+        clear analysis, reporting, and dashboards.
       </p>
     </div>
 
@@ -76,9 +73,8 @@
 
       <div class="grid">
 
-        <!-- Classic Models -->
         <div class="card">
-          <img src="assets/classic-models.png" alt="Classic Models screenshot">
+          <img src="classic-models.png" alt="Classic Models">
           <div class="content">
             <h3>Classic Models – Sales & Financial Analysis</h3>
             <p>End-to-end sales and financial analysis using SQL, Excel, and Power BI.</p>
@@ -91,44 +87,38 @@
           </div>
         </div>
 
-        <!-- Stature Leadership -->
         <div class="card">
-          <img src="assets/stature-leadership.png" alt="Stature Leadership screenshot">
+          <img src="stature-leadership.png" alt="Stature Leadership">
           <div class="content">
             <h3>Stature Leadership – Survey Analytics</h3>
             <p>Survey and people analytics supporting leadership alignment decisions.</p>
             <div class="btns">
               <a class="btn primary" href="https://github.com/dhiraj092/Stature-Leadership" target="_blank">Repository</a>
               <span class="btn">Power BI</span>
-              <span class="btn">Survey Data</span>
             </div>
           </div>
         </div>
 
-        <!-- Association Rule Mining -->
         <div class="card">
-          <img src="assets/grocery-basket.png" alt="Grocery Basket Analysis screenshot">
+          <img src="grocery-basket.png" alt="Grocery Basket Analysis">
           <div class="content">
             <h3>Association Rule Mining – Grocery Basket Analysis</h3>
-            <p>Market basket analysis using Apriori to identify product purchase patterns.</p>
+            <p>Market basket analysis to identify product purchase patterns and cross-sell opportunities.</p>
             <div class="btns">
               <a class="btn primary" href="https://github.com/dhiraj092/Association-Rule-Mining-Grocery-Basket-Analysis" target="_blank">Repository</a>
               <span class="btn">Python</span>
-              <span class="btn">Apriori</span>
             </div>
           </div>
         </div>
 
-        <!-- Online Shoppers Classification -->
         <div class="card">
-          <img src="assets/online-shoppers.png" alt="Online Shoppers Classification screenshot">
+          <img src="online-shoppers.png" alt="Online Shoppers Classification">
           <div class="content">
             <h3>Classification of Online Shoppers</h3>
-            <p>Classification model to predict purchasing behavior of online visitors.</p>
+            <p>Classification analysis to support prediction of online purchasing behavior.</p>
             <div class="btns">
               <a class="btn primary" href="https://github.com/dhiraj092/Classification-of-online-shoppers" target="_blank">Repository</a>
               <span class="btn">Python</span>
-              <span class="btn">Classification</span>
             </div>
           </div>
         </div>
@@ -139,9 +129,8 @@
     <!-- OTHER PROJECTS -->
     <div class="section">
       <h2>Other Projects</h2>
-      <p class="small">Auto-loaded from GitHub (public repos). Sorted by recently updated.</p>
+      <p class="small">Additional exploratory and learning projects.</p>
       <ul id="repoList" class="repo-list"></ul>
-      <p id="repoStatus" class="small"></p>
     </div>
 
     <div class="footer">
@@ -153,56 +142,63 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    const customDescriptions = {
+      "social-media-analytics":
+        "Analysis of engagement and performance metrics to identify content trends and support marketing decisions.",
+
+      "customer-segmentation-using-clustering-jewelry-store":
+        "Customer segmentation using clustering to group buyers by purchasing behavior.",
+
+      "advertising-click-prediction-logistic-regression":
+        "Classification analysis to estimate ad click likelihood and support marketing prioritization.",
+
+      "usa-housing-price-prediction-linear-regression":
+        "Exploratory regression analysis to understand factors influencing housing prices.",
+
+      "housing-price-prediction-using-keras-regression":
+        "Neural network regression experiment exploring non-linear relationships in housing price data.",
+
+      "customer-segmentation-using-k-means-clustering-with-mall-customers":
+        "Exploratory segmentation analysis to identify distinct customer spending patterns.",
+
+      "customer-churn-in-telecom-company":
+        "Churn analysis identifying patterns associated with customer attrition.",
+
+      "classifier":
+        "Collection of exploratory classification experiments focused on model behavior."
+    };
+
+    const featuredRepos = [
+      "classic-models",
+      "stature-leadership",
+      "association-rule-mining-grocery-basket-analysis",
+      "classification-of-online-shoppers"
+    ];
+
     async function loadRepos() {
       const list = document.getElementById("repoList");
-      const status = document.getElementById("repoStatus");
-      status.textContent = "Loading repos…";
 
-      try {
-        const res = await fetch("https://api.github.com/users/dhiraj092/repos?per_page=100&sort=updated");
-        if (!res.ok) throw new Error(res.status);
+      const res = await fetch("https://api.github.com/users/dhiraj092/repos?per_page=100&sort=updated");
+      const repos = await res.json();
 
-        const repos = await res.json();
+      const filtered = repos.filter(r => {
+        const name = (r.name || "").toLowerCase().trim();
+        return name !== "dhiraj092.github.io" &&
+               !featuredRepos.includes(name) &&
+               !r.fork;
+      });
 
-        const featuredRepos = [
-          "classic-models",
-          "stature-leadership",
-          "association-rule-mining-grocery-basket-analysis",
-          "classification-of-online-shoppers"
-        ];
+      list.innerHTML = filtered.map(r => {
+        const key = (r.name || "").toLowerCase().trim();
+        const desc = customDescriptions[key] || "Exploratory analytics project.";
 
-        const filtered = repos.filter(r => {
-          const name = (r.name || "").toLowerCase().trim();
-          return (
-            name !== "dhiraj092.github.io" &&
-            !featuredRepos.includes(name) &&
-            !r.fork
-          );
-        });
-
-        if (!filtered.length) {
-          status.textContent = "No other public repositories found.";
-          return;
-        }
-
-        list.innerHTML = filtered.map(r => `
+        return `
           <li class="repo-item">
-            <div class="repo-top">
-              <div>
-                <a class="repo-name" href="${r.html_url}" target="_blank">${r.name}</a>
-                <div class="small">${r.description || "No description yet."}</div>
-              </div>
-              <div class="repo-meta">
-                ${r.language || "—"} · ★ ${r.stargazers_count}
-              </div>
-            </div>
+            <a class="repo-name" href="${r.html_url}" target="_blank">${r.name}</a>
+            <div class="small">${desc}</div>
           </li>
-        `).join("");
-
-        status.textContent = "";
-      } catch {
-        status.textContent = "Could not load repositories right now.";
-      }
+        `;
+      }).join("");
     }
 
     loadRepos();
