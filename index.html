@@ -88,6 +88,23 @@
           </div>
         </div>
 
+        <!-- NEW FEATURED PROJECT (NO IMAGE) -->
+        <div class="card">
+          <div class="content">
+            <h3>Find Your Recipe – AI Recipe Finder</h3>
+            <p>
+              AI-powered recipe generator built with Streamlit and the OpenAI API. Suggests cuisines based on available
+              ingredients, generates structured recipes, and provides cooking video search guidance.
+            </p>
+            <div class="btns">
+              <a class="btn primary" href="https://github.com/dhiraj092/Find-your-Recipe" target="_blank">View Project</a>
+              <span class="btn">Python</span>
+              <span class="btn">Streamlit</span>
+              <span class="btn">OpenAI API</span>
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <img src="assets/stature-leadership.png" alt="Stature Leadership">
           <div class="content">
@@ -133,23 +150,23 @@
       <p class="small">Additional exploratory and learning projects.</p>
       <ul id="repoList" class="repo-list"></ul>
     </div>
-  
-  <div class="section">
-  <h2>Certifications</h2>
 
-  <ul class="repo-list">
-    <li class="repo-item">
-      <div class="repo-name">Microsoft Excel - Excel from Beginner to Advanced</div>
-      <div class="small">Advanced Excel skills including data analysis, formulas, vlookup, pivot tables, and reporting..</div>
-    </li>
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+      <h2>Certifications</h2>
 
-    <li class="repo-item">
-      <div class="repo-name">The Ultimate SQL & Snowflake Data Analysis Bootcamp - 2026</div>
-      <div class="small">SQL data analysis, SQL optimization, and SQL modeling with Snowflake in this complete course for all skill levels.</div>
-    </li>
-  </ul>
-</div>
+      <ul class="repo-list">
+        <li class="repo-item">
+          <div class="repo-name">Microsoft Excel - Excel from Beginner to Advanced</div>
+          <div class="small">Advanced Excel skills including data analysis, formulas, vlookup, pivot tables, and reporting.</div>
+        </li>
 
+        <li class="repo-item">
+          <div class="repo-name">The Ultimate SQL & Snowflake Data Analysis Bootcamp - 2026</div>
+          <div class="small">SQL data analysis, SQL optimization, and SQL modeling with Snowflake in this complete course for all skill levels.</div>
+        </li>
+      </ul>
+    </div>
 
     <div class="footer">
       © <span id="year"></span> Dhiraj Thapa
@@ -186,11 +203,13 @@
         "Collection of exploratory classification experiments focused on model behavior."
     };
 
+    // Include find-your-recipe here so it does NOT appear under "Other Projects"
     const featuredRepos = [
       "classic-models",
       "stature-leadership",
       "association-rule-mining-grocery-basket-analysis",
-      "classification-of-online-shoppers"
+      "classification-of-online-shoppers",
+      "find-your-recipe"
     ];
 
     async function loadRepos() {
