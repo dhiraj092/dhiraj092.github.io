@@ -6,43 +6,177 @@
   <title>Dhiraj Thapa | Portfolio</title>
 
   <style>
-    :root { --max: 980px; --border: #e6e6e6; --text: #1a1a1a; --muted:#555; }
-    body { font-family: Arial, sans-serif; color: var(--text); margin: 0; background: #fff; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 40px 18px; }
+    :root {
+      --max: 980px;
+      --border: #e6e6e6;
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #0b66c3;
+      --bg-soft: #f8f9fb;
+    }
 
-    h1 { margin: 0 0 6px 0; font-size: 40px; }
-    .subtitle { color: var(--muted); margin: 0 0 18px 0; }
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      margin: 0;
+      background: #fff;
+      line-height: 1.55;
+    }
 
-    a { color: #0b66c3; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 44px 18px 56px;
+    }
 
-    .toplinks { margin: 10px 0 22px 0; display: flex; gap: 12px; flex-wrap: wrap; }
-    .pill { border: 1px solid var(--border); padding: 8px 12px; border-radius: 999px; color: var(--text); }
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 40px;
+      line-height: 1.1;
+    }
 
-    .section { margin-top: 34px; }
-    .section h2 { margin: 0 0 14px 0; font-size: 24px; }
+    .subtitle {
+      color: var(--muted);
+      margin: 0 0 18px 0;
+      font-size: 18px;
+    }
 
-    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    @media (max-width: 760px){ .grid { grid-template-columns: 1fr; } }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-    .card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #fff; }
-    .card img { width: 100%; height: 200px; object-fit: cover; background: #f6f6f6; }
-    .card .content { padding: 14px 14px 16px 14px; }
+    a:hover {
+      text-decoration: underline;
+    }
 
-    .card h3 { margin: 0 0 6px 0; font-size: 18px; }
-    .card p { margin: 0 0 12px 0; color: var(--muted); }
+    .toplinks {
+      margin: 12px 0 28px 0;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-    .btns { display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); color: var(--text); }
-    .btn.primary { background: #0b66c3; color: #fff; border-color: #0b66c3; }
+    .pill {
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--text);
+      background: #fff;
+    }
 
-    .repo-list { list-style: none; padding: 0; margin: 0; }
-    .repo-item { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; }
+    .section {
+      margin-top: 38px;
+    }
 
-    .repo-name { font-weight: 700; }
-    .small { color: var(--muted); font-size: 14px; margin-top: 6px; }
+    .section h2 {
+      margin: 0 0 14px 0;
+      font-size: 24px;
+    }
 
-    .footer { margin-top: 40px; color: var(--muted); font-size: 13px; }
+    .lead {
+      max-width: 760px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background: var(--bg-soft);
+      display: block;
+    }
+
+    .card .content {
+      padding: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .card p {
+      margin: 0 0 14px 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 14px;
+      background: #fff;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .repo-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .repo-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      background: #fff;
+    }
+
+    .repo-name {
+      font-weight: 700;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .footer {
+      margin-top: 44px;
+      color: var(--muted);
+      font-size: 13px;
+    }
   </style>
 </head>
 
@@ -50,37 +184,38 @@
   <div class="wrap">
 
     <h1>Dhiraj Thapa</h1>
-    <p class="subtitle">Business & Data Analyst | SQL · Excel · Power BI · Python</p>
+    <p class="subtitle">Business Analyst | Data Analyst | SQL · Excel · Power BI · Python</p>
 
     <div class="toplinks">
-      <a class="pill" href="https://www.linkedin.com/in/dhiraj-thapa-668304198/" target="_blank">LinkedIn</a>
-      <a class="pill" href="https://github.com/dhiraj092" target="_blank">GitHub</a>
-      <a class="pill" href="https://public.tableau.com/app/profile/dhiraj.thapa/vizzes" target="_blank">Tableau</a>
+      <a class="pill" href="https://www.linkedin.com/in/dhiraj-thapa-668304198/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="pill" href="https://github.com/dhiraj092" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="pill" href="https://public.tableau.com/app/profile/dhiraj.thapa/vizzes" target="_blank" rel="noopener noreferrer">Tableau</a>
+      <a class="pill" href="YOUR_RESUME_LINK_HERE" target="_blank" rel="noopener noreferrer">Resume</a>
     </div>
 
-    <!-- ABOUT -->
     <div class="section">
       <h2>About</h2>
-      <p>
-        Business Analytics graduate with experience turning data into insights using SQL, Excel,
-        Power BI, and Python. Focused on supporting business and stakeholder decisions through
-        clear analysis, reporting, and dashboards.
+      <p class="lead">
+        I am a Business Analytics graduate with experience in reporting, dashboard development, process improvement,
+        and stakeholder-focused analysis. My work combines business context with data to support decision-making,
+        improve workflows, and turn messy information into clear, useful insights.
       </p>
     </div>
 
-    <!-- FEATURED PROJECTS -->
     <div class="section">
       <h2>Featured Projects</h2>
-
       <div class="grid">
 
         <div class="card">
-          <img src="assets/classic-models.png" alt="Classic Models">
+          <img src="assets/classic-models.png" alt="Classic Models dashboard preview">
           <div class="content">
             <h3>Classic Models – Sales & Financial Analysis</h3>
-            <p>End-to-end sales and financial analysis using SQL, Excel, and Power BI.</p>
+            <p>
+              Analyzed sales, profitability, accounts receivable, and customer credit exposure using SQL, Excel,
+              and Power BI to support business decision-making.
+            </p>
             <div class="btns">
-              <a class="btn primary" href="https://github.com/dhiraj092/Classic-Models" target="_blank">View Project</a>
+              <a class="btn primary" href="https://github.com/dhiraj092/Classic-Models" target="_blank" rel="noopener noreferrer">View Project</a>
               <span class="btn">SQL</span>
               <span class="btn">Excel</span>
               <span class="btn">Power BI</span>
@@ -88,16 +223,32 @@
           </div>
         </div>
 
-        <!-- NEW FEATURED PROJECT (NO IMAGE) -->
+        <div class="card">
+          <img src="assets/stature-leadership.png" alt="Stature Leadership dashboard preview">
+          <div class="content">
+            <h3>Stature Leadership – Survey Analytics Dashboard</h3>
+            <p>
+              Built leadership dashboards in Power BI to turn survey data into measurable insights and reduce
+              manual reporting for internal decision-makers.
+            </p>
+            <div class="btns">
+              <a class="btn primary" href="https://github.com/dhiraj092/Stature-Leadership" target="_blank" rel="noopener noreferrer">View Project</a>
+              <span class="btn">Power BI</span>
+              <span class="btn">DAX</span>
+              <span class="btn">Data Modeling</span>
+            </div>
+          </div>
+        </div>
+
         <div class="card">
           <div class="content">
             <h3>Find Your Recipe – AI Recipe Finder</h3>
             <p>
-              AI-powered recipe generator built with Streamlit and the OpenAI API. Suggests cuisines based on available
-              ingredients, generates structured recipes, and provides cooking video search guidance.
+              Built a Streamlit app that uses AI to suggest recipes based on available ingredients, generate
+              structured cooking steps, and support a simple user-facing workflow.
             </p>
             <div class="btns">
-              <a class="btn primary" href="https://github.com/dhiraj092/Find-your-Recipe" target="_blank">View Project</a>
+              <a class="btn primary" href="https://github.com/dhiraj092/Find-your-Recipe" target="_blank" rel="noopener noreferrer">View Project</a>
               <span class="btn">Python</span>
               <span class="btn">Streamlit</span>
               <span class="btn">OpenAI API</span>
@@ -105,67 +256,13 @@
           </div>
         </div>
 
-        <div class="card">
-          <img src="assets/stature-leadership.png" alt="Stature Leadership">
-          <div class="content">
-            <h3>Stature Leadership – Survey Analytics</h3>
-            <p>Survey and people analytics supporting leadership alignment decisions.</p>
-            <div class="btns">
-              <a class="btn primary" href="https://github.com/dhiraj092/Stature-Leadership" target="_blank">View Project</a>
-              <span class="btn">Power BI</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/grocery-basket.png" alt="Grocery Basket Analysis">
-          <div class="content">
-            <h3>Association Rule Mining – Grocery Basket Analysis</h3>
-            <p>Market basket analysis to identify product purchase patterns and cross-sell opportunities.</p>
-            <div class="btns">
-              <a class="btn primary" href="https://github.com/dhiraj092/Association-Rule-Mining-Grocery-Basket-Analysis" target="_blank">View Project</a>
-              <span class="btn">Python</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/online-shoppers.png" alt="Online Shoppers Classification">
-          <div class="content">
-            <h3>Classification of Online Shoppers</h3>
-            <p>Classification analysis to support prediction of online purchasing behavior.</p>
-            <div class="btns">
-              <a class="btn primary" href="https://github.com/dhiraj092/Classification-of-online-shoppers" target="_blank">View Project</a>
-              <span class="btn">Python</span>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
 
-    <!-- OTHER PROJECTS -->
     <div class="section">
-      <h2>Other Projects</h2>
-      <p class="small">Additional exploratory and learning projects.</p>
+      <h2>Additional Projects</h2>
+      <p class="small">A smaller set of supporting analytics projects from my GitHub.</p>
       <ul id="repoList" class="repo-list"></ul>
-    </div>
-
-    <!-- CERTIFICATIONS -->
-    <div class="section">
-      <h2>Certifications</h2>
-
-      <ul class="repo-list">
-        <li class="repo-item">
-          <div class="repo-name">Microsoft Excel - Excel from Beginner to Advanced</div>
-          <div class="small">Advanced Excel skills including data analysis, formulas, vlookup, pivot tables, and reporting.</div>
-        </li>
-
-        <li class="repo-item">
-          <div class="repo-name">The Ultimate SQL & Snowflake Data Analysis Bootcamp - 2026</div>
-          <div class="small">SQL data analysis, SQL optimization, and SQL modeling with Snowflake in this complete course for all skill levels.</div>
-        </li>
-      </ul>
     </div>
 
     <div class="footer">
@@ -178,64 +275,86 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const customDescriptions = {
+      "association-rule-mining-grocery-basket-analysis":
+        "Market basket analysis identifying product purchase patterns and cross-sell opportunities.",
+
+      "customer-churn-in-telecom-company":
+        "Churn analysis exploring customer attrition patterns and business retention opportunities.",
+
       "social-media-analytics":
         "Analysis of engagement and performance metrics to identify content trends and support marketing decisions.",
 
       "customer-segmentation-using-clustering-jewelry-store":
-        "Customer segmentation using clustering to group buyers by purchasing behavior.",
+        "Customer segmentation analysis grouping buyers by purchasing behavior.",
 
       "advertising-click-prediction-logistic-regression":
-        "Classification analysis to estimate ad click likelihood and support marketing prioritization.",
+        "Classification analysis estimating ad click likelihood to support marketing prioritization.",
 
       "usa-housing-price-prediction-linear-regression":
-        "Exploratory regression analysis to understand factors influencing housing prices.",
+        "Regression analysis exploring factors that influence housing prices.",
 
       "housing-price-prediction-using-keras-regression":
-        "Neural network regression experiment exploring non-linear relationships in housing price data.",
-
-      "customer-segmentation-using-k-means-clustering-with-mall-customers":
-        "Exploratory segmentation analysis to identify distinct customer spending patterns.",
-
-      "customer-churn-in-telecom-company":
-        "Churn analysis identifying patterns associated with customer attrition.",
-
-      "classifier":
-        "Collection of exploratory classification experiments focused on model behavior."
+        "Neural network regression experiment exploring non-linear housing price relationships."
     };
 
-    // Include find-your-recipe here so it does NOT appear under "Other Projects"
-    const featuredRepos = [
+    const hiddenRepos = [
+      "dhiraj092.github.io",
       "classic-models",
       "stature-leadership",
-      "association-rule-mining-grocery-basket-analysis",
+      "find-your-recipe",
       "classification-of-online-shoppers",
-      "find-your-recipe"
+      "classifier",
+      "customer-segmentation-using-k-means-clustering-with-mall-customers"
+    ];
+
+    const allowedAdditionalRepos = [
+      "association-rule-mining-grocery-basket-analysis",
+      "customer-churn-in-telecom-company",
+      "social-media-analytics",
+      "customer-segmentation-using-clustering-jewelry-store",
+      "advertising-click-prediction-logistic-regression",
+      "usa-housing-price-prediction-linear-regression",
+      "housing-price-prediction-using-keras-regression"
     ];
 
     async function loadRepos() {
       const list = document.getElementById("repoList");
 
-      const res = await fetch("https://api.github.com/users/dhiraj092/repos?per_page=100&sort=updated");
-      const repos = await res.json();
+      try {
+        const res = await fetch("https://api.github.com/users/dhiraj092/repos?per_page=100&sort=updated");
+        const repos = await res.json();
 
-      const filtered = repos.filter(r => {
-        const name = (r.name || "").toLowerCase().trim();
-        return name !== "dhiraj092.github.io" &&
-               !featuredRepos.includes(name) &&
-               !r.fork;
-      });
+        if (!Array.isArray(repos)) {
+          list.innerHTML = `<li class="repo-item"><div class="small">Unable to load repositories right now.</div></li>`;
+          return;
+        }
 
-      list.innerHTML = filtered.map(r => {
-        const key = (r.name || "").toLowerCase().trim();
-        const desc = customDescriptions[key] || "Exploratory analytics project.";
+        const filtered = repos.filter(r => {
+          const name = (r.name || "").toLowerCase().trim();
+          return !r.fork &&
+                 !hiddenRepos.includes(name) &&
+                 allowedAdditionalRepos.includes(name);
+        });
 
-        return `
-          <li class="repo-item">
-            <a class="repo-name" href="${r.html_url}" target="_blank">${r.name}</a>
-            <div class="small">${desc}</div>
-          </li>
-        `;
-      }).join("");
+        if (filtered.length === 0) {
+          list.innerHTML = `<li class="repo-item"><div class="small">No additional projects to display.</div></li>`;
+          return;
+        }
+
+        list.innerHTML = filtered.map(r => {
+          const key = (r.name || "").toLowerCase().trim();
+          const desc = customDescriptions[key] || "Additional analytics project.";
+
+          return `
+            <li class="repo-item">
+              <a class="repo-name" href="${r.html_url}" target="_blank" rel="noopener noreferrer">${r.name}</a>
+              <div class="small">${desc}</div>
+            </li>
+          `;
+        }).join("");
+      } catch (error) {
+        list.innerHTML = `<li class="repo-item"><div class="small">Unable to load repositories right now.</div></li>`;
+      }
     }
 
     loadRepos();
