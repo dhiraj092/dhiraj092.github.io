@@ -40,11 +40,6 @@
       font-size: 18px;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
     .toplinks {
       margin: 12px 0 28px 0;
       display: flex;
@@ -57,6 +52,8 @@
       padding: 8px 12px;
       border-radius: 999px;
       background: #fff;
+      text-decoration: none;
+      color: var(--text);
     }
 
     .section {
@@ -65,6 +62,11 @@
 
     .section h2 {
       font-size: 24px;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 15px;
     }
 
     .grid {
@@ -91,17 +93,49 @@
       padding: 16px;
     }
 
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0 0 12px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
     .btn {
       padding: 6px 10px;
       border-radius: 8px;
       border: 1px solid var(--border);
       font-size: 13px;
+      text-decoration: none;
+      color: var(--text);
     }
 
     .btn.primary {
       background: var(--accent);
-      color: #fff;
+      color: white;
       border-color: var(--accent);
+    }
+
+    .repo-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .repo-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+
+    .repo-name {
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--text);
     }
   </style>
 </head>
@@ -110,43 +144,97 @@
   <div class="wrap">
 
     <h1>Dhiraj Thapa</h1>
-    <p class="subtitle">Business Analyst | Process Improvement | Systems Thinking</p>
+    <p class="subtitle">
+      Business Systems Analyst | CRM, Process Optimization, and Data-Driven Decision Support
+    </p>
 
     <div class="toplinks">
       <a class="pill" href="https://github.com/dhiraj092" target="_blank">GitHub</a>
       <a class="pill" href="https://www.linkedin.com/in/dhiraj-thapa-668304198/" target="_blank">LinkedIn</a>
     </div>
 
+    <!-- ABOUT -->
+    <div class="section">
+      <h2>About</h2>
+      <p class="small">
+        Business Systems Analyst with experience translating business needs into structured requirements, workflows, and reporting solutions. 
+        My work focuses on improving how systems support business operations—whether through CRM design, process optimization, or data-driven reporting.
+        <br><br>
+        I have worked across fintech and organizational environments to analyze workflows, identify inefficiencies, and design solutions that improve visibility and decision-making. 
+        This includes building reporting dashboards, defining system requirements, and supporting the development of structured processes for lead management and performance tracking.
+        <br><br>
+        I bring a combination of analytical thinking, stakeholder communication, and system-level understanding, allowing me to bridge the gap between business needs and technical implementation.
+      </p>
+    </div>
+
+    <!-- FEATURED PROJECTS -->
     <div class="section">
       <h2>Featured Projects</h2>
 
       <div class="grid">
 
-        <!-- EXISTING PROJECT -->
         <div class="card">
           <img src="assets/classic-models.png">
           <div class="content">
-            <h3>Classic Models – Financial Analysis</h3>
-            <p>Sales, credit risk, and profitability analysis using SQL and Power BI.</p>
-            <a class="btn primary" href="https://github.com/dhiraj092/Classic-Models" target="_blank">View</a>
+            <h3>Sales & Financial Performance Analysis</h3>
+            <p>
+              Analyzed revenue, profitability, and customer credit exposure using SQL and Power BI to support business decision-making.
+            </p>
+            <a class="btn primary" href="https://github.com/dhiraj092/Classic-Models" target="_blank">View Project</a>
           </div>
         </div>
 
-        <!-- NEW EBEEMA PROJECT -->
         <div class="card">
-          <img src="assets/ebeema-crm.png">
+          <img src="assets/stature-leadership.png">
           <div class="content">
-            <h3>CRM System Design – eBeema</h3>
+            <h3>Leadership Insights & Reporting Dashboard</h3>
             <p>
-              Designed a CRM system to manage leads, advisors, and policy tracking.
-              Created requirements, workflows, and UAT test cases.
+              Built a Power BI reporting solution to transform qualitative survey data into structured insights for leadership decision-making.
+            </p>
+            <a class="btn primary" href="https://github.com/dhiraj092/Stature-Leadership" target="_blank">View Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/Screenshot%202026-04-29%20224911.png">
+          <div class="content">
+            <h3>CRM System Design & Workflow Optimization</h3>
+            <p>
+              Designed a CRM system to streamline lead management, advisor workflows, and policy tracking using structured requirements and process flows.
             </p>
             <a class="btn primary" href="https://github.com/dhiraj092/Ebeema-BA" target="_blank">View Project</a>
           </div>
         </div>
 
       </div>
+    </div>
 
+    <!-- ADDITIONAL PROJECTS -->
+    <div class="section">
+      <h2>Additional Projects</h2>
+      <p class="small">Selected supporting analytics projects.</p>
+
+      <ul class="repo-list">
+
+        <li class="repo-item">
+          <a class="repo-name" href="https://github.com/dhiraj092/customer-churn-in-telecom-company" target="_blank">
+            Customer Retention & Churn Analysis
+          </a>
+          <div class="small">
+            Analyzed customer behavior to identify churn drivers and support retention strategy decisions.
+          </div>
+        </li>
+
+        <li class="repo-item">
+          <a class="repo-name" href="https://github.com/dhiraj092/association-rule-mining-grocery-basket-analysis" target="_blank">
+            Customer Purchase Behavior Analysis
+          </a>
+          <div class="small">
+            Identified product relationships and cross-selling opportunities using association rule mining.
+          </div>
+        </li>
+
+      </ul>
     </div>
 
   </div>
